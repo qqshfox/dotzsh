@@ -49,13 +49,16 @@ export NVM_AUTO_USE=true
 zplug load
 
 function ruby_version_info() {
+  local version;
   if [ "x$RUBY_VERSION" != "x" ]; then
-    echo "[♦ $RUBY_VERSION]"
+    version="$RUBY_VERSION"
   else
     if command -v ruby >/dev/null 2>&1; then
-      echo "[♦ ruby-$(ruby -e 'puts RUBY_VERSION')]"
+      version="ruby-$(ruby -e 'puts RUBY_VERSION')"
     fi
   fi
+
+  [ "x$version" != "x" ] && echo "[♦ $version]"
 }
 
 function node_version_info() {
