@@ -1,3 +1,5 @@
+export LANG=zh_CN.UTF-8
+
 if [ -d ~/.zplug ]; then
   export ZPLUG_HOME=~/.zplug
 elif command -v brew >/dev/null 2>&1 && [ -d "$( brew --prefix )"/opt/zplug ]; then
