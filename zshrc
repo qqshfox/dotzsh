@@ -51,15 +51,15 @@ zplug load
 function ruby_version_info() {
   if [ "x$RUBY_VERSION" != "x" ]; then
     if command -v ruby >/dev/null 2>&1; then
-      echo "[ruby-$(ruby -e 'puts RUBY_VERSION')]"
+      echo "[♦ ruby-$(ruby -e 'puts RUBY_VERSION')]"
     fi
   else
-    echo "[$RUBY_VERSION]"
+    echo "[♦ $RUBY_VERSION]"
   fi
 }
 
 function node_version_info() {
-  if command -v node >/dev/null 2>&1; then echo "[node-$(node -v)]"; fi
+  if command -v node >/dev/null 2>&1; then echo "[⬡ node-$(node -v)]"; fi
 }
 
 PROMPT='%F{white}%*%f '$PROMPT
