@@ -29,6 +29,7 @@ zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
+zplug "jimhester/per-directory-history"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh"
