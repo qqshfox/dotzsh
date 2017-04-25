@@ -27,7 +27,7 @@ zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
   export NVM_NO_USE=true
   export NVM_AUTO_USE=true
-zplug "plugins/ssh-agent", from:oh-my-zsh
+zplug "plugins/ssh-agent", from:oh-my-zsh, defer:2
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async"
