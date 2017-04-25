@@ -27,12 +27,13 @@ zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
+zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 zplug "jimhester/per-directory-history"
 
 # Can manage local plugins
-zplug "~/.zsh/configs", from:local, use:"*.zsh"
+zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
