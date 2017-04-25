@@ -25,6 +25,8 @@ zplug "ndbroadbent/scm_breeze", hook-build:"ln -fs \"$ZPLUG_HOME/repos/ndbroadbe
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
+  export NVM_NO_USE=true
+  export NVM_AUTO_USE=true
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
@@ -42,9 +44,6 @@ if ! zplug check --verbose; then
       echo; zplug install
   fi
 fi
-
-export NVM_NO_USE=true
-export NVM_AUTO_USE=true
 
 # Then, source plugins and add commands to $PATH
 zplug load
