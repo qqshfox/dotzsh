@@ -33,6 +33,8 @@ zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 zplug "jimhester/per-directory-history"
+zplug "Russell91/sshrc", as:command, use:"sshrc"
+  export SSHHOME="$HOME/.zsh/configs/sshrc"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
