@@ -35,6 +35,7 @@ zplug "sindresorhus/pure"
 zplug "jimhester/per-directory-history"
 zplug "Russell91/sshrc", as:command, use:"sshrc"
   export SSHHOME="$HOME/.zsh/configs/sshrc"
+zplug "tj/git-extras", use:"etc/git-extras-completion.zsh"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
