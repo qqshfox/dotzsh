@@ -16,7 +16,6 @@ zstyle ':completion::complete:*' use-cache 1
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
 zplug "chriskempson/base16-shell", use:"scripts/base16-ocean.sh"
 zplug "ndbroadbent/scm_breeze", hook-build:"ln -fs \"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/git.scmbrc.example\" \"$HOME/.git.scmbrc\"", use:"scm_breeze.sh", defer:2
@@ -30,10 +29,14 @@ zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
-zplug "jimhester/per-directory-history"
 zplug "Russell91/sshrc", as:command, use:"sshrc"
   export SSHHOME="$HOME/.zsh/configs/sshrc"
 zplug "tj/git-extras", use:"etc/git-extras-completion.zsh"
+zplug "b4b4r07/zsh-history-enhanced"
+  export ZSH_HISTORY_FILE="$HOME/.zsh/tmp/zsh_history_enhanced"
+  export ZSH_HISTORY_FILTER="fzy:fzf:peco:percol"
+  export ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+  export ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
