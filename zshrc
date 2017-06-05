@@ -36,7 +36,7 @@ zplug "b4b4r07/zsh-history-enhanced"
   export ZSH_HISTORY_FILE="$HOME/.zsh/tmp/zsh_history_enhanced"
   export ZSH_HISTORY_FILTER="fzy:fzf:peco:percol"
   export ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
-  export ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+  #export ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
