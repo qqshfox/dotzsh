@@ -3,6 +3,5 @@ if [ -d $HOME/workspace/go ]; then
 fi
 
 if [ -d $GOPATH ]; then
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
+  export PATH=$PATH:$GOPATH/bin
 fi
