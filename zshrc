@@ -32,11 +32,11 @@ zplug "sindresorhus/pure"
 zplug "Russell91/sshrc", as:command, use:"sshrc"
   export SSHHOME="$HOME/.zsh/configs/sshrc"
 zplug "tj/git-extras", use:"etc/git-extras-completion.zsh"
-zplug "b4b4r07/zsh-history-ltsv", use:"init.zsh"
-  export ZSH_HISTORY_FILE="$HOME/.zsh/tmp/zsh_history_ltsv"
-  export ZSH_HISTORY_FILTER="fzy:fzf:peco:percol"
-  export ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
-  #export ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+zplug "junegunn/fzf", hook-build:"./install --bin", use:"shell/key-bindings.zsh"
+  export PATH="$PATH:$ZPLUG_REPOS/junegunn/fzf/bin"
+  export FZF_DEFAULT_COMMAND='ag -g ""'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_CTRL_R_OPTS="--reverse"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
