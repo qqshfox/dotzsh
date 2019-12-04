@@ -1,3 +1,3 @@
-export LANG=zh_CN.UTF-8
-export LC_TYPE=$LANG
-export PATH="/usr/local/bin:$PATH"
+export LANG=en_US.UTF-8
+export LC_CTYPE=$LANG
+export PATH="$HOME/.bin:/usr/local/bin:$PATH"
