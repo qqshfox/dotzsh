@@ -27,7 +27,7 @@ zplug "plugins/ssh-agent", from:oh-my-zsh, defer:2
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
-zplug "sindresorhus/pure", from:"github", use:"pure.zsh", as:"theme"
+zplug "sindresorhus/pure", from:"github", use:"pure.zsh", as:"theme", if:'! (( $+commands[starship] ))'
 zplug "Russell91/sshrc", as:command, use:"sshrc"
   export SSHHOME="$HOME/.zsh/configs/sshrc"
 zplug "tj/git-extras", use:"etc/git-extras-completion.zsh"
@@ -41,7 +41,7 @@ zplug "junegunn/fzf", hook-build:"./install --bin", use:"shell/key-bindings.zsh"
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
 
 # Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
+if ! zplug check; then
   printf "Install? [y/N]: "
   if read -q; then
       echo; zplug install

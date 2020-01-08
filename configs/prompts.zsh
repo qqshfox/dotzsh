@@ -1,19 +1,23 @@
-function ruby_version_info() {
-  local version;
-  if [ "x$RUBY_VERSION" != "x" ]; then
-    version="$RUBY_VERSION"
-  else
-    if command -v ruby >/dev/null 2>&1; then
-      version="ruby-$(ruby -e 'puts RUBY_VERSION')"
+if (( $+commands[starship] )); then
+  source <(starship init zsh --print-full-init)
+else
+  function ruby_version_info() {
+    local version;
+    if [ "x$RUBY_VERSION" != "x" ]; then
+      version="$RUBY_VERSION"
+    else
+      if command -v ruby >/dev/null 2>&1; then
+        version="ruby-$(ruby -e 'puts RUBY_VERSION')"
+      fi
     fi
-  fi
 
-  [ "x$version" != "x" ] && echo "[♦ $version]"
-}
+    [ "x$version" != "x" ] && echo "[♦ $version]"
+  }
 
-function node_version_info() {
-  if command -v node >/dev/null 2>&1; then echo "[⬡ node-$(node -v)]"; fi
-}
+  function node_version_info() {
+    if command -v node >/dev/null 2>&1; then echo "[⬡ node-$(node -v)]"; fi
+  }
 
-PROMPT='%F{white}%*%f '$PROMPT
-RPROMPT='%F{magenta}$(ruby_version_info)$(node_version_info)%f'
+  PROMPT='%F{white}%*%f '$PROMPT
+  RPROMPT='%F{magenta}$(ruby_version_info)$(node_version_info)%f'
+fi
