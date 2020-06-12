@@ -18,7 +18,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "chriskempson/base16-shell", use:"scripts/base16-ocean.sh"
-zplug "ndbroadbent/scm_breeze", hook-build:"ln -fs \"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/git.scmbrc.example\" \"$HOME/.git.scmbrc\"", use:"scm_breeze.sh", defer:2
+zplug "scmbreeze/scm_breeze", hook-build:"ln -fs \"$ZPLUG_HOME/repos/scmbreeze/scm_breeze/git.scmbrc.example\" \"$HOME/.git.scmbrc\"", use:"scm_breeze.sh", defer:2
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
