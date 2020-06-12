@@ -1,5 +1,5 @@
 if (( $+commands[starship] )); then
-  source <(starship init zsh --print-full-init)
+  source <(starship init zsh)
 else
   function ruby_version_info() {
     local version;
