@@ -28,6 +28,7 @@ zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 zplug "sindresorhus/pure", from:"github", use:"pure.zsh", as:"theme", if:'! (( $+commands[starship] ))'
 zplug "tj/git-extras", use:"etc/git-extras-completion.zsh"
+  export PATH="$PATH:$ZPLUG_REPOS/tj/git-extras/bin"
 zplug "junegunn/fzf", hook-build:"./install --bin", use:"shell/key-bindings.zsh"
   export PATH="$PATH:$ZPLUG_REPOS/junegunn/fzf/bin"
   export FZF_DEFAULT_COMMAND='ag -g ""'
