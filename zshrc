@@ -23,7 +23,6 @@ zplug "b4b4r07/enhancd", use:init.sh
 zplug "supercrabtree/k"
 zplug "lukechilds/zsh-nvm"
   export NVM_AUTO_USE=true
-zplug "plugins/ssh-agent", from:oh-my-zsh, defer:2
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
