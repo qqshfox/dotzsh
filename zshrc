@@ -28,10 +28,6 @@ zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 zplug "sindresorhus/pure", from:"github", use:"pure.zsh", as:"theme", if:'! (( $+commands[starship] ))'
 zplug "tj/git-extras", hook-build:"make install", use:"etc/git-extras-completion.zsh"
 zplug "junegunn/fzf", hook-build:"./install --bin", use:"shell/key-bindings.zsh"
-  export PATH="$PATH:$ZPLUG_REPOS/junegunn/fzf/bin"
-  export FZF_DEFAULT_COMMAND='ag -g ""'
-  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-  export FZF_CTRL_R_OPTS="--reverse"
 
 # Can manage local plugins
 zplug "~/.zsh/configs", from:local, use:"*.zsh", defer:1
