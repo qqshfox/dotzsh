@@ -14,7 +14,7 @@ compinit -d ~/.zsh/tmp/zcompdump
 zstyle ':completion::complete:*' use-cache 1
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zdharma/fast-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "chriskempson/base16-shell", use:"scripts/base16-ocean.sh"
