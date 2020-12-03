@@ -1,0 +1,3 @@
+*.credentials.zsh
+/tmp/
+/local/
