@@ -4,5 +4,5 @@ function hl() {
   else
     src="cat $2"
   fi
-  bash -c "$src | highlight -O rtf --syntax $1 --font Inconsolata --style vampire --font-size 24 -W -J 55 -j 3 | pbcopy"
+  bash -c "$src | highlight -O rtf --syntax $1 --font 'Nerd Hack Font' --style base16/summerfruit-light --font-size 24 -W | pbcopy"
 }
