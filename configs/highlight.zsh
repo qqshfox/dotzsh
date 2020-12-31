@@ -1,4 +1,4 @@
-function hl() {
+function hlt() {
   if [ -z "$2" ]; then
     src="pbpaste"
   else
