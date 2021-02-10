@@ -21,7 +21,8 @@ zinit lucid for \
     chriskempson/base16-shell \
  from"gh-r" as"program" pick"starship" \
     starship/starship \
-    scmbreeze/scm_breeze
+ ver"nix" \
+    qqshfox/scm_breeze
 
 eval "$(starship init zsh)"
 
