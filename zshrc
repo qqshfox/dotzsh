@@ -44,7 +44,7 @@ zinit wait lucid for \
     b4b4r07/enhancd \
  as"program" pick"grc" src"grc.zsh" \
     garabik/grc \
- from"gh-r" as"program" mv"exa* -> exa" atload="alias ls=exa" \
+ from"gh-r" as"program" pick"bin/exa" atload="alias ls=exa" \
     ogham/exa \
     OMZP::history \
     OMZP::thefuck \
