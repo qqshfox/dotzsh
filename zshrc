@@ -50,7 +50,7 @@ zinit wait lucid for \
     OMZP::thefuck \
     OMZP::ssh-agent \
     OMZP::aws \
- as"program" make"!" atclone"./direnv hook zsh > zhook.zsh" atpull"%atclone" src"zhook.zsh" \
+ from"gh-r" as"program" mv"direnv.* -> direnv" atclone"./direnv hook zsh > zhook.zsh" atpull"%atclone" src"zhook.zsh" \
     direnv/direnv \
     hlissner/zsh-autopair \
  as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat" \
