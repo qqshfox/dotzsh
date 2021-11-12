@@ -3,8 +3,11 @@ if (( $+commands[nvim] )); then
 elif (( $+commands[mvim] )); then
     export EDITOR="mvim -v"
 fi
-export GIT_EDITOR="$EDITOR"
 
-alias vim="$EDITOR"
+if [ -n "$EDITOR" ]; then
+  export GIT_EDITOR="$EDITOR"
+  alias vim="$EDITOR"
+fi
+
 alias vimdiff="vim -d"
 alias vi="vim"
